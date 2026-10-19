@@ -1,0 +1,112 @@
+/* Page Setup & Centering */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* Calculator Container Frame */
+#calculator {
+    width: 300px;
+    padding: 24px;
+    background-color: #1e293b;
+    border-radius: 24px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 
+                0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+/* Display Screen Styling */
+#display {
+    width: 100%;
+    height: 65px;
+    margin-bottom: 20px;
+    padding: 12px 18px;
+    font-size: 32px;
+    font-weight: 600;
+    text-align: right;
+    background-color: #020617;
+    border: 1px solid #334155;
+    border-radius: 14px;
+    color: #f8fafc;
+    outline: none;
+    letter-spacing: 1px;
+}
+
+#display::placeholder {
+    color: #475569;
+}
+
+/* Button Layout Grid */
+#button-click {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* Standard Button Styling */
+.btn {
+    width: 100%;
+    height: 58px;
+    border-radius: 14px;
+    border: none;
+    font-size: 22px;
+    font-weight: 600;
+    background-color: #334155;
+    color: #f8fafc;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover & Active Button Micro-interactions */
+.btn:hover {
+    background-color: #475569;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px -2px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+/* Special Button Color Variations */
+
+/* Clear (C) Button */
+.btn-clear {
+    background-color: #ef4444;
+    color: #ffffff;
+}
+
+.btn-clear:hover {
+    background-color: #dc2626;
+}
+
+/* Operators (+, -, *, /) Buttons */
+.btn-operator {
+    background-color: #3b82f6;
+    color: #ffffff;
+}
+
+.btn-operator:hover {
+    background-color: #2563eb;
+}
+
+/* Equals (=) Button */
+.btn-equals {
+    background-color: #10b981;
+    color: #ffffff;
+}
+
+.btn-equals:hover {
+    background-color: #059669;
+}
